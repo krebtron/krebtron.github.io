@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTV全球最好G平台小蓝 - 官方指南与特色解析</title>
+    <meta name="description" content="GTV全球最好G平台小蓝指南：了解G平台特色、小蓝功能、使用场景与常见问题，一站式获取全球G平台信息与体验建议。">
+    <meta name="keywords" content="GTV,全球最好G平台,小蓝,G平台指南,G平台特色">
+    <style>
+        /* ----- 全局重置与变量 ----- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --bg-deep: #0b0e1f;
+            --bg-card: #161b33;
+            --bg-soft: #1e2442;
+            --accent-glow: #4e7fff;
+            --accent-blue: #3a6cf5;
+            --cyan-light: #62d9ff;
+            --text-main: #eef2ff;
+            --text-secondary: #a8b3dd;
+            --border-light: #2c3566;
+            --gradient-hero: linear-gradient(135deg, #1d2b64 0%, #2b4b9a 100%);
+            --shadow-glow: 0 10px 30px rgba(0, 20, 80, 0.5);
+            --radius-xl: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            line-height: 1.5;
+            background-image: radial-gradient(circle at 20% 20%, rgba(70, 130, 255, 0.08) 0%, transparent 30%),
+                              radial-gradient(circle at 90% 10%, rgba(0, 255, 240, 0.05) 0%, transparent 35%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        a {
+            color: var(--cyan-light);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        a:hover {
+            opacity: 0.8;
+        }
+
+        /* ----- 页眉导航 ----- */
+        .site-header {
+            padding: 20px 0 10px;
+            border-bottom: 1px solid rgba(80, 120, 255, 0.15);
+            backdrop-filter: blur(4px);
+            background: rgba(8, 12, 30, 0.5);
+        }
+        .header-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-badge {
+            background: var(--gradient-hero);
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: white;
+            box-shadow: 0 6px 14px rgba(0, 80, 200, 0.4);
+            letter-spacing: -0.5px;
+        }
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #fff, #c6dbff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .logo-text small {
+            font-size: 0.8rem;
+            font-weight: 400;
+            background: none;
+            color: var(--text-secondary);
+            margin-left: 8px;
+            letter-spacing: 0.4px;
+        }
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+            font-weight: 500;
+        }
+        .main-nav a {
+            color: var(--text-main);
+            font-size: 1rem;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.2s;
+        }
+        .main-nav a:hover {
+            border-bottom-color: var(--cyan-light);
+            color: #fff;
+        }
+
+        /* ----- Hero 首屏 ----- */
+        .hero {
+            padding: 70px 0 50px;
+            background: var(--gradient-hero);
+            border-radius: 0 0 40px 40px;
+            box-shadow: var(--shadow-glow);
+            margin-bottom: 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(100, 180, 255, 0.2) 0%, transparent 60%);
+            right: -100px;
+            top: -100px;
+            pointer-events: none;
+        }
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+        .hero-copy h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: #fff;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 18px;
+        }
+        .hero-copy h1 span {
+            background: linear-gradient(145deg, #b0dbff, #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .hero-desc {
+            font-size: 1.2rem;
+            color: #d2e3ff;
+            max-width: 530px;
+            margin-bottom: 28px;
+            border-left: 4px solid var(--cyan-light);
+            padding-left: 18px;
+        }
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            cursor: default;
+            letter-spacing: 0.3px;
+        }
+        .btn-primary {
+            background: #fff;
+            color: #0b1e4f;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+        .btn-primary:hover {
+            background: #eaf3ff;
+            transform: scale(1.02);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.5);
+            color: white;
+            backdrop-filter: blur(4px);
+        }
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+        .hero-visual {
+            background: rgba(10, 20, 50, 0.45);
+            backdrop-filter: blur(6px);
+            border-radius: var(--radius-xl);
+            padding: 28px 20px;
+            border: 1px solid rgba(120, 180, 255, 0.3);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .visual-card-glow {
+            font-size: 1.2rem;
+            color: #c5dcff;
+            background: rgba(0, 40, 100, 0.4);
+            border-radius: 40px;
+            padding: 10px 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            border: 1px solid #3a6cf5;
+        }
+        .blue-icon-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2.8rem;
+            filter: drop-shadow(0 0 12px #3a6cf5);
+            margin-bottom: 20px;
+        }
+        .stat-badge {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.25);
+            padding: 14px 6px;
+            border-radius: 40px;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-num {
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: white;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ----- 分类特性卡片 ----- */
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .section-title::before {
+            content: '';
+            width: 8px;
+            height: 34px;
+            background: var(--accent-blue);
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 0 12px #3a6cf5;
+        }
+        .section-sub {
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 40px 0 60px;
+        }
+        .feature-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            padding: 28px 20px;
+            border: 1px solid var(--border-light);
+            transition: 0.25s;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+        }
+        .feature-card:hover {
+            transform: translateY(-6px);
+            border-color: #4e7fff;
+            box-shadow: 0 15px 30px rgba(0, 40, 120, 0.5);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        /* ----- 双栏区块 (平台优势 & 使用场景) ----- */
+        .split-panel {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+        }
+        .info-panel {
+            background: var(--bg-soft);
+            border-radius: var(--radius-xl);
+            padding: 28px;
+            border: 1px solid rgba(80, 130, 220, 0.2);
+        }
+        .info-panel h2 {
+            font-size: 1.8rem;
+            margin-bottom: 18px;
+            border-left: 6px solid var(--accent-blue);
+            padding-left: 14px;
+        }
+        .info-list {
+            list-style: none;
+        }
+        .info-list li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #2f3b70;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+        }
+        .info-list li::before {
+            content: "◆";
+            color: var(--accent-blue);
+            font-size: 1rem;
+        }
+        .badge-light {
+            background: rgba(58, 108, 245, 0.2);
+            padding: 2px 10px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: #bcd5ff;
+            margin-left: 8px;
+        }
+
+        /* ----- FAQ 折叠区 (纯展示) ----- */
+        .faq-section {
+            margin: 60px 0;
+        }
+        .faq-grid {
+            display: grid;
+            gap: 16px;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px 24px;
+            border-left: 6px solid var(--accent-blue);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        .faq-question {
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .faq-answer {
+            color: var(--text-secondary);
+        }
+
+        /* ----- 页脚 ----- */
+        .site-footer {
+            border-top: 1px solid #1e2852;
+            padding: 40px 0 30px;
+            margin-top: 60px;
+            background: rgba(5, 8, 20, 0.6);
+        }
+        .footer-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .footer-col p {
+            color: var(--text-secondary);
+            max-width: 300px;
+        }
+
+        /* ----- 响应式 ----- */
+        @media (max-width: 900px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+            .hero-copy h1 {
+                font-size: 2.4rem;
+            }
+            .split-panel {
+                grid-template-columns: 1fr;
+            }
+            .main-nav ul {
+                gap: 14px;
+                flex-wrap: wrap;
+            }
+        }
+        @media (max-width: 520px) {
+            .header-flex {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .hero {
+                padding: 45px 0 30px;
+            }
+        }
+    </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-flex">
+            <div class="logo-area">
+                <div class="logo-badge">G</div>
+                <div class="logo-text">GTV 小蓝<small>全球G平台</small></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#features">平台特性</a></li>
+                    <li><a href="#scenes">使用场景</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                    <li><a href="#insight">深度解析</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO 首屏区 -->
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-copy">
+                    <h1>GTV 全球最好G平台 <span>小蓝</span></h1>
+                    <p class="hero-desc">专为全球G平台用户打造的小蓝入口，集成高效工具、互动生态与实时资讯，重新定义专业G平台体验。</p>
+                    <div class="hero-actions">
+                        <span class="btn btn-primary">探索小蓝功能</span>
+                        <span class="btn btn-outline">G平台生态</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="visual-card-glow">⫸ 小蓝 · 全球互联 ⫷</div>
+                    <div class="blue-icon-grid">⚡ 🌐 🔷</div>
+                    <div class="stat-badge">
+                        <div class="stat-item">
+                            <div class="stat-num">180+</div>
+                            <div class="stat-label">国家/地区</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">24/7</div>
+                            <div class="stat-label">在线支持</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">99.9%</div>
+                            <div class="stat-label">稳定运行</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 核心特性 -->
+            <section id="features">
+                <h2 class="section-title">G平台 · 小蓝核心特色</h2>
+                <p class="section-sub">从全球资源聚合到低延迟交互，小蓝为G平台用户提供流畅、安全的专属空间</p>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>全球节点加速</h3>
+                        <p>覆盖六大洲的优质线路，智能路由优化，让G平台访问更快速稳定，告别等待。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全加密隧道</h3>
+                        <p>采用高等级加密协议，保护隐私与数据流，公共网络下同样安全可靠。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧩</div>
+                        <h3>小蓝专属组件</h3>
+                        <p>为G平台定制的一键式工具面板，集成状态监控、快捷切换等轻量模块。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📡</div>
+                        <h3>实时状态雷达</h3>
+                        <p>提供平台可用性监测与延迟可视化的仪表盘，辅助选择最佳接入时段。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 优势与场景 双栏 -->
+            <section id="scenes">
+                <div class="split-panel">
+                    <div class="info-panel">
+                        <h2>为什么选择小蓝？</h2>
+                        <ul class="info-list">
+                            <li><strong>多端适配</strong> 桌面/移动/平板统一体验<span class="badge-light">跨平台</span></li>
+                            <li><strong>智能路由</strong> 根据网络状况动态优化链路</li>
+                            <li><strong>低延迟交互</strong> 面向实时场景的传输协议</li>
+                            <li><strong>透明状态</strong> 无隐形限制，实时查看连接质量</li>
+                            <li><strong>社区驱动</strong> 由G平台资深用户共同迭代建议</li>
+                        </ul>
+                    </div>
+                    <div class="info-panel">
+                        <h2>典型使用场景</h2>
+                        <ul class="info-list">
+                            <li><strong>全球协作</strong> 跨区域团队低延迟访问G平台工作区</li>
+                            <li><strong>资讯获取</strong> 流畅浏览全球G平台相关前沿动态</li>
+                            <li><strong>资源交互</strong> 安全传输大体积文件/素材</li>
+                            <li><strong>社群互动</strong> 参与实时讨论与分享，小蓝加速不掉线</li>
+                            <li><strong>多账号管理</strong> 便捷切换不同区域节点</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 深度解析 / 使用建议 -->
+            <section id="insight" style="margin: 50px 0;">
+                <h2 class="section-title">G平台小蓝 · 深度指南</h2>
+                <div style="background: var(--bg-card); padding: 30px; border-radius: var(--radius-xl); border: 1px solid #2b3f88;">
+                    <p style="font-size: 1.2rem; color: #e0ecff; margin-bottom: 16px;"><strong>“全球最好G平台”的定位</strong> 并非单一宣称，而是G平台生态中小蓝工具集合的体验标准。它整合了连接管理、网络优化与信息面板三大维度，适合追求效率与稳定性的用户。</p>
+                    <p style="color: var(--text-secondary); margin-bottom: 18px;">小蓝的界面设计遵循简洁原则，主功能入口均在首屏，并且所有状态指示实时可见。对于新用户，建议先使用自动选择节点，再根据实际延迟进行微调。进阶用户可自定义协议参数，满足特殊网络环境。</p>
+                    <p style="color: var(--text-secondary);">我们建议用户定期关注G平台官方发布的小蓝更新日志，以获取最新的优化算法与安全补丁。任何第三方插件都需谨慎验证来源，确保账户与数据安全。</p>
+                </div>
+            </section>
+
+            <!-- FAQ 区块 -->
+            <section id="faq" class="faq-section">
+                <h2 class="section-title">常见问题 · 小蓝与G平台</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">❓ GTV 与小蓝是什么关系？</div>
+                        <div class="faq-answer">GTV 是G平台的全球电视/在线服务品牌，而“小蓝”是其面向核心用户的轻量辅助工具，旨在提升连接质量与操作效率。小蓝不是独立平台，而是G平台优化组件。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 小蓝是否适用于所有地区？</div>
+                        <div class="faq-answer">小蓝的全球节点覆盖大部分区域，但具体可用节点受当地网络政策影响。用户可在界面内查看当前区域推荐节点，并依据状态雷达调整。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 如何确保使用小蓝时的安全性？</div>
+                        <div class="faq-answer">始终从G平台官方渠道获取小蓝更新，避免使用来源不明的修改版。同时启用设备锁与双重验证，为账户增加额外保护。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">❓ 小蓝支持哪些设备？</div>
+                        <div class="faq-answer">目前支持 Windows、macOS、iOS、Android 及主流 Linux 发行版。智能电视与路由器版本正在逐步开放。</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h4 style="color:white; font-size:1.2rem; margin-bottom: 12px;">GTV 小蓝索引</h4>
+                <p>独立指南与信息聚合，帮助您更好的理解和使用G平台小蓝功能。非官方附属页面，仅作用户交流参考。</p>
+            </div>
+            <div class="footer-col">
+                <h4 style="color:white; margin-bottom: 12px;">内容导航</h4>
+                <ul style="list-style:none; color: var(--text-secondary); display: grid; gap: 6px;">
+                    <li>平台特性</li>
+                    <li>使用场景</li>
+                    <li>深度解析</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <p style="margin-bottom: 8px;">© 2025 G平台小蓝指南</p>
+                <p style="font-size:0.8rem;">页面仅用于信息展示与学习交流</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
